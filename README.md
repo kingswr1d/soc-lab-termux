@@ -9,7 +9,7 @@ Android-based defensive security lab for SOC analyst practice. No cloud, no VPN,
 
 A working cybersecurity home lab built for Android/Termux. It generates realistic synthetic attack logs, inspects network packets, and produces triage-ready reports — the same core tasks a SOC Tier 1 analyst performs daily.
 
-**Built by:** A head chef transitioning into cybersecurity, South Africa.
+**Built by:** Kgosi Ntshingila
 **Purpose:** Demonstrate hands-on SOC skills without a university degree or expensive training labs.
 
 ## Why This Exists
@@ -106,7 +106,7 @@ RECOMMENDATION: Block source IP at perimeter, rotate affected credentials, enfor
 
 ## Career Context
 
-This repo is part of a documented career transition into cybersecurity with no university qualification. Full 24-month roadmap, SA-specific cert priorities, and client-pricing strategy are in `career_roadmap.md`.
+This repo is part of a documented career transition into cybersecurity. Full 24-month roadmap, SA-specific cert priorities, and client-pricing strategy are in `career_roadmap.md`.
 
 ## Project Status
 
@@ -118,7 +118,7 @@ This repo is part of a documented career transition into cybersecurity with no u
 - [x] Packaged for Termux on Android
 - [ ] PortSwringer lab writeups added
 - [ ] TryHackMe SOC Level 1 completion certificate
-- [ ] CompTIA Security+ (exam scheduled)
+- [ ] CompTIA Security+ (exam to be scheduled)
 - [ ] First paying log-analysis client
 
 ## Skills Demonstrated
@@ -140,4 +140,4 @@ This repo is part of a documented career transition into cybersecurity with no u
 
 ## License
 
-MIT — feel free to fork, study, and adapt. If this repo helped you get your first security role, I'd love to hear about it.
+MIT
