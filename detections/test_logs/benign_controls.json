@@ -1,0 +1,41 @@
+[
+  {
+    "EventID": 4625,
+    "TargetUserName": "jdoe",
+    "IpAddress": "192.168.1.50",
+    "LogonType": 2,
+    "WorkstationName": "WORKSTATION-01",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T09:00:00.000Z"
+  },
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "CommandLine": "powershell.exe -Command \"Get-Process | Where-Object {$_.CPU -gt 50}\"",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\admin",
+    "ProcessId": 1200,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\schtasks.exe",
+    "CommandLine": "schtasks.exe /query /tn \"Microsoft\\Windows\\Defrag\" /v /fo LIST",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\admin",
+    "ProcessId": 1500,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T11:00:00.000Z"
+  },
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\certutil.exe",
+    "CommandLine": "certutil.exe -store My",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\admin",
+    "ProcessId": 1800,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T12:00:00.000Z"
+  }
+]

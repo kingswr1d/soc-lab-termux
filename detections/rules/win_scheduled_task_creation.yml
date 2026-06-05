@@ -1,0 +1,44 @@
+title: Scheduled Task Creation via schtasks.exe or COM
+id: f3c4d5e6-a7b8-9012-cdef-345678901234
+status: test
+description: Detects creation of scheduled tasks via schtasks.exe or COM interface, used for persistence (MITRE T1053.005).
+author: SOC Lab Portfolio
+date: 2024-01-15
+modified: 2024-01-15
+tags:
+  - attack.persistence
+  - attack.t1053.005
+  - attack.privilege_escalation
+logsource:
+  product: windows
+  category: process_creation
+  definition: 'Requires: Sysmon Event ID 1 or Windows Security Event ID 4688 with command line logging'
+detection:
+  selection_schtasks:
+    Image|endswith: '\schtasks.exe'
+    CommandLine|contains: '/create'
+  selection_com:
+    Image|endswith: '\mmc.exe'
+    CommandLine|contains: 'taskschd.msc'
+  selection_powershell:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains|all:
+      - 'Register-ScheduledTask'
+      - '-Action'
+  selection_at:
+    Image|endswith: '\at.exe'
+  condition: selection_schtasks or selection_com or selection_powershell or selection_at
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - ParentImage
+  - User
+  - ProcessId
+falsepositives:
+  - Legitimate software installations creating scheduled tasks
+  - System administrator activity
+level: medium
+references:
+  - https://attack.mitre.org/techniques/T1053/005/
+  - https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page

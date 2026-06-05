@@ -1,0 +1,12 @@
+[
+  {
+    "EventID": 1,
+    "Image": "C:\\Windows\\System32\\schtasks.exe",
+    "CommandLine": "schtasks.exe /create /tn \"Microsoft\\Windows\\Update\\WinUpdate\" /tr \"C:\\Temp\\malware.exe\" /sc onlogon /ru SYSTEM",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "User": "CORP\\jdoe",
+    "ProcessId": 5280,
+    "ParentProcessId": 3140,
+    "Timestamp": "2024-01-15T12:00:00.000Z"
+  }
+]

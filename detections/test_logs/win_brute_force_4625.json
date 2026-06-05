@@ -1,0 +1,92 @@
+[
+  {
+    "EventID": 4625,
+    "TargetUserName": "administrator",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "admin",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:00:15.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "test",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:00:30.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "user1",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:00:45.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "user2",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:01:00.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "guest",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:01:15.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "backup",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:01:30.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "service",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:01:45.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "sql",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:02:00.000Z"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "oracle",
+    "IpAddress": "192.168.1.100",
+    "LogonType": 3,
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\lsass.exe",
+    "Timestamp": "2024-01-15T10:02:15.000Z"
+  }
+]
