@@ -11,3 +11,4 @@ venv/
 *.zip
 .DS_Store
 .Thumbs.db
+detection/tests/atomic-red-team/
