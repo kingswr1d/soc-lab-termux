@@ -1,0 +1,56 @@
+title: Suspicious PowerShell Command Line
+id: d4f8a2e0-9c7b-4e1a-8f3d-2c9b6a7f8e1d
+status: test
+description: Detects suspicious PowerShell command line patterns including encoded commands, bypass execution policy, and download cradles
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.md
+author: soc-lab
+date: 2024-01-15
+modified: 2024-01-15
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_encoded:
+        CommandLine|contains:
+            - '-encodedcommand'
+            - '-ec'
+            - '-e '
+    selection_bypass:
+        CommandLine|contains:
+            - '-executionpolicy bypass'
+            - '-ep bypass'
+            - '-executionpolicy unrestricted'
+            - '-ep unrestricted'
+    selection_download_cradle:
+        CommandLine|contains:
+            - 'invoke-expression'
+            - 'iex '
+            - 'downloadstring'
+            - 'downloadfile'
+            - 'webclient'
+            - 'net.webclient'
+            - 'invoke-webrequest'
+            - 'iwr '
+    selection_obfuscation:
+        CommandLine|contains:
+            - '-windowstyle hidden'
+            - '-w hidden'
+            - '-noprofile'
+            - '-nop'
+            - '-noninteractive'
+            - '-sta'
+    selection_suspicious_modules:
+        CommandLine|contains:
+            - 'system.management.automation'
+            - 'system.net.webclient'
+            - 'microsoft.powershell.commands'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate administrative scripts using encoded commands
+    - Software deployment tools using download cradles
+level: medium

@@ -1,0 +1,49 @@
+title: Scheduled Task Creation for Persistence
+id: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+status: test
+description: Detects creation of scheduled tasks used for persistence, including suspicious task names, paths, and user contexts
+references:
+    - https://attack.mitre.org/techniques/T1053/005/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.md
+author: soc-lab
+date: 2024-01-15
+modified: 2024-01-15
+tags:
+    - attack.persistence
+    - attack.t1053.005
+    - attack.privilege_escalation
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_schtasks_create:
+        Image|endswith: '\schtasks.exe'
+        CommandLine|contains:
+            - '/create'
+            - '/sc once'
+            - '/sc onlogon'
+            - '/sc onstart'
+            - '/ru system'
+            - '/rp ""'
+    selection_powershell_scheduledtask:
+        Image|endswith: '\powershell.exe'
+        CommandLine|contains:
+            - 'register-scheduledtask'
+            - 'new-scheduledtask'
+            - 'scheduledtaskaction'
+            - 'scheduledtasktrigger'
+    selection_com_objects:
+        Image|endswith:
+            - '\mmc.exe'
+            - '\taskschd.msc'
+        CommandLine|contains: 'taskschd'
+    selection_xml_import:
+        Image|endswith: '\schtasks.exe'
+        CommandLine|contains:
+            - '/xml'
+            - '/tn '
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate scheduled task creation by administrators
+    - Software installation creating maintenance tasks
+level: medium

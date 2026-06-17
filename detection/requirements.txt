@@ -1,0 +1,3 @@
+sigma-cli
+pyyaml
+requests

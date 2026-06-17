@@ -1,0 +1,108 @@
+{
+  "name": "SOC Lab Detection Coverage",
+  "version": "4.5",
+  "domain": "mitre-enterprise",
+  "description": "Detection coverage map generated from Sigma rules in soc-lab/detection/rules/",
+  "filters": {
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "network",
+      "cloud",
+      "office-365",
+      "saas",
+      "iaas",
+      "google-workspace",
+      "azure-ad"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": true,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "score": 1,
+      "color": "#ff6b6b",
+      "comment": "Covered by 1 rule(s)",
+      "enabled": true,
+      "metadata": [],
+      "links": [
+        "https://attack.mitre.org/techniques/T1059.001/"
+      ],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "score": 1,
+      "color": "#4ecdc4",
+      "comment": "Covered by 1 rule(s)",
+      "enabled": true,
+      "metadata": [],
+      "links": [
+        "https://attack.mitre.org/techniques/T1003.001/"
+      ],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "score": 1,
+      "color": "#ffe66d",
+      "comment": "Covered by 1 rule(s)",
+      "enabled": true,
+      "metadata": [],
+      "links": [
+        "https://attack.mitre.org/techniques/T1053.005/"
+      ],
+      "showSubtechniques": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ffebee",
+      "#ef5350"
+    ],
+    "minValue": 0,
+    "maxValue": 10
+  },
+  "legendItems": [
+    {
+      "label": "No coverage",
+      "color": "#ffffff"
+    },
+    {
+      "label": "Low coverage (1 rule)",
+      "color": "#ffebee"
+    },
+    {
+      "label": "High coverage (3+ rules)",
+      "color": "#ef5350"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "rules_directory",
+      "value": "/data/data/com.termux/files/home/soc-lab/detection/rules"
+    },
+    {
+      "name": "generator",
+      "value": "soc-lab/detection/scripts/coverage_map.py"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#fafafa",
+  "selectSubtechniquesWithParent": true
+}
