@@ -24,7 +24,6 @@ Most people trying to break into cybersecurity can talk about logs, but they've 
 - `scripts/tools/generate_sample_logs.py` — Generates 2,000-line synthetic Apache + Linux auth datasets every run
 - `logs/` — Sample attack data for immediate practice
 - `install.sh` — One-command Termux setup
-- `career_roadmap.md` — No-degree, no-excuse path from zero to employed in SA cybersecurity
 
 ## Screenshot of Output
 
@@ -103,10 +102,6 @@ USERNAMES_TARGETED: root, admin, www-data
 SUCCESSFUL_LOGONS: 3
 RECOMMENDATION: Block source IP at perimeter, rotate affected credentials, enforce key-based auth.
 ```
-
-## Career Context
-
-This repo is part of a documented career transition into cybersecurity. Full 24-month roadmap, SA-specific cert priorities, and client-pricing strategy are in `career_roadmap.md`.
 
 ## Project Status
 
