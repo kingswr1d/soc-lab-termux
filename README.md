@@ -118,8 +118,9 @@ This repo is part of a documented career transition into cybersecurity. Full 24-
 - [x] Packaged for Termux on Android
 - [ ] PortSwringer lab writeups added
 - [ ] TryHackMe SOC Level 1 completion certificate
-- [ ] CompTIA Security+ (exam to be scheduled)
-- [ ] First paying log-analysis client
+- [ ] CompTIA Security+ exam to be scheduled
+- [ ] CC exam on 31st July 2026
+- [ ] AWS cloud practitioner exam scheduled
 
 ## Skills Demonstrated
 
