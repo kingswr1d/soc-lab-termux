@@ -1,0 +1,82 @@
+[
+  {
+    "EventID": 4625,
+    "EventTime": "2026-06-18T10:00:01.123Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52341
+  },
+  {
+    "EventID": 4625,
+    "EventTime": "2026-06-18T10:00:15.456Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52342
+  },
+  {
+    "EventID": 4625,
+    "EventTime": "2026-06-18T10:00:30.789Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52343
+  },
+  {
+    "EventID": 4625,
+    "EventTime": "2026-06-18T10:00:45.012Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52344
+  },
+  {
+    "EventID": 4625,
+    "EventTime": "2026-06-18T10:01:00.345Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52345
+  },
+  {
+    "EventID": 4624,
+    "EventTime": "2026-06-18T10:01:15.678Z",
+    "SourceIp": "192.168.1.100",
+    "TargetUserName": "administrator",
+    "LogonType": 10,
+    "Status": "0x0",
+    "WorkstationName": "ATTACKER-PC",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "IpAddress": "192.168.1.100",
+    "IpPort": 52346,
+    "LogonId": "0x123456",
+    "ElevatedToken": false,
+    "AuthenticationPackageName": "Negotiate"
+  }
+]

@@ -19,12 +19,14 @@ This repository demonstrates practical detection engineering skills by implement
 | 3 | `win_scheduled_task_creation.yml` | T1053.005 | Scheduled Task Persistence | Sysmon (1) / 4688 | Medium | `win_scheduled_task_creation.json` |
 | 4 | `win_lolbin_certutil_download.yml` | T1105 / T1059.001 | Ingress Tool Transfer | Sysmon (1) / 4688 | High | `win_lolbin_certutil_download.json` |
 | 5 | `win_powershell_download_cradle.yml` | T1059.001 / T1105 | PowerShell / Ingress Tool Transfer | Sysmon (1) / 4688 | High | `win_powershell_download_cradle.json` |
+| 6 | `win_rdp_brute_force.yml` | T1110.001 | RDP Brute Force | Windows Security (4624/4625) | High | `win_rdp_brute_force.json` |
+| 7 | `win_amsi_bypass.yml` | T1562.001 | AMSI Bypass / Defense Evasion | PowerShell Script Block (4104) | Critical | `win_amsi_bypass.json` |
 
 ## Coverage
 
 - **Tactics**: Credential Access, Execution, Persistence, Defense Evasion, Command & Control
-- **Techniques**: 6 ATT&CK (sub)techniques covered
-- **Log Sources**: Windows Security (4625), Sysmon/4688 Process Creation
+- **Techniques**: 7 ATT&CK (sub)techniques covered
+- **Log Sources**: Windows Security (4624/4625), Sysmon/4688 Process Creation, PowerShell Script Block (4104)
 
 ## Quick Start
 
@@ -94,7 +96,7 @@ To add a new rule:
 
 ## Portfolio Talking Points
 
-> "I built a CI-tested Sigma rule pack covering 6 ATT&CK techniques across credential access, execution, persistence, and C2. Each rule converts to Splunk, Elastic, and KQL, with unit tests proving detection logic and false positive control."
+> "I built a CI-tested Sigma rule pack covering 7 ATT&CK techniques across credential access, execution, persistence, defense evasion, and C2. Each rule converts to Splunk, Elastic, and KQL, with unit tests proving detection logic and false positive control. New additions: RDP brute force (T1110.001) with Logon Type 10 correlation, and AMSI bypass (T1562.001) detection via PowerShell Script Block Logging."
 
 ## References
 

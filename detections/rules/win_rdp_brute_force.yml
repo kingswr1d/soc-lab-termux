@@ -1,0 +1,38 @@
+title: RDP Brute Force - Multiple Failed Logons Followed by Success
+id: d1a2b3c4-e5f6-7890-abcd-ef1234567890
+status: test
+description: Detects RDP brute force attacks by identifying multiple Event ID 4625 (failed logon) with Logon Type 10 (RemoteInteractive) from the same source IP targeting the same account within a short timeframe, followed by a successful Event ID 4624 (successful logon) from the same IP.
+author: SOC Lab
+date: 2026-06-18
+tags:
+  - attack.t1110.001
+  - attack.credential_access
+  - attack.initial_access
+  - detection.brute_force
+  - detection.rdp
+logsource:
+  product: windows
+  service: security
+  definition: 'Requirements: Security Event Log (Event IDs 4624, 4625). Logon Type 10 = RemoteInteractive (RDP).'
+detection:
+  selection_failed:
+    EventID: 4625
+    LogonType: 10
+  selection_success:
+    EventID: 4624
+    LogonType: 10
+  timeframe: 5m
+  condition: selection_failed by SourceIp, TargetUserName | count() >= 5
+    and selection_success by SourceIp, TargetUserName | count() >= 1
+    within timeframe
+falsepositives:
+  - Legitimate users mistyping passwords repeatedly
+  - Automated scripts/services with stale credentials
+  - Load balancer health checks (if logging as failed logons)
+level: high
+mitre:
+  - T1110.001
+references:
+  - https://attack.mitre.org/techniques/T1110/001/
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4624

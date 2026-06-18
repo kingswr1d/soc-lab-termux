@@ -37,5 +37,61 @@
     "ProcessId": 1800,
     "ParentProcessId": 3140,
     "Timestamp": "2024-01-15T12:00:00.000Z"
+  },
+  {
+    "EventID": 4624,
+    "TargetUserName": "jdoe",
+    "IpAddress": "192.168.1.50",
+    "LogonType": 10,
+    "WorkstationName": "WORKSTATION-01",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "Timestamp": "2024-01-15T13:00:00.000Z",
+    "Status": "0x0",
+    "LogonId": "0xABCDEF",
+    "AuthenticationPackageName": "Negotiate"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "jdoe",
+    "IpAddress": "192.168.1.50",
+    "LogonType": 10,
+    "WorkstationName": "WORKSTATION-01",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "Timestamp": "2024-01-15T13:05:00.000Z",
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A"
+  },
+  {
+    "EventID": 4625,
+    "TargetUserName": "jdoe",
+    "IpAddress": "192.168.1.50",
+    "LogonType": 10,
+    "WorkstationName": "WORKSTATION-01",
+    "ProcessName": "C:\\Windows\\System32\\mstscax.dll",
+    "Timestamp": "2024-01-15T13:10:00.000Z",
+    "Status": "0xC000006D",
+    "SubStatus": "0xC000006A"
+  },
+  {
+    "EventID": 4104,
+    "ScriptBlockText": "Write-Host 'Checking AMSI status for diagnostics'; [System.Management.Automation.AmsiUtils]::amsiInitFailed",
+    "ScriptBlockId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "Path": "C:\\Scripts\\diag_amsi.ps1",
+    "MachineName": "WORKSTATION-01",
+    "User": "CORP\\admin",
+    "ProcessId": 2200,
+    "ThreadId": 1111,
+    "Timestamp": "2024-01-15T14:00:00.000Z"
+  },
+  {
+    "EventID": 4104,
+    "ScriptBlockText": "Invoke-Expression (Get-Content 'C:\\Scripts\\module.ps1' -Raw)",
+    "ScriptBlockId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "Path": "C:\\Scripts\\loader.ps1",
+    "MachineName": "WORKSTATION-01",
+    "User": "CORP\\admin",
+    "ProcessId": 2300,
+    "ThreadId": 2222,
+    "Timestamp": "2024-01-15T14:05:00.000Z"
   }
 ]
